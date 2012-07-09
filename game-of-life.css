@@ -1,0 +1,24 @@
+body{
+  font-family: Helvetica;
+}
+
+.container{
+  width:640px;
+  margin:0 auto;
+}
+
+.sector-landscape{
+  display:block;
+  width:16px;
+  height:16px;
+  margin:1px;
+  border: thin solid #333;
+  float:left;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+.sector-landscape.true{
+  background:#333;
+}

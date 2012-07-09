@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Game of Life</title>
+    <script src="lib/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="lib/underscore-min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="lib/backbone-min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="lib/mustache.js" type="text/javascript" charset="utf-8"></script>
+    <script src="lib/gameOfLife.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="game-of-life.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+  </head>
+  <body>
+    <div class='container'>
+      <h1>Conway's Game of Life</h1>
+      <div id="world">
+
+      </div>
+      <p id="evolutions"></p>
+    </div>
+    <script type="text/javascript" charset="utf-8">
+      $(document).ready(function(){
+        var gameOfLife = new GameOfLife.Router
+        Backbone.history.start({pushState:true});
+        gameOfLife.navigate("")
+      })
+    </script>
+  </body>
+</html>
