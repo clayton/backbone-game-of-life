@@ -92,6 +92,7 @@ module 'The World - Evolving'
         true})
     @mockSector.expects("determineFate").once()
     @mockSector.expects("evolve").once()
+    @mockSector.expects("trigger").once()
     @world.models = [@mockSector.object]
     null
   teardown: ->
@@ -101,6 +102,10 @@ test 'should tell all of the sectors determine their fate', ->
   ok @mockSector.verify()
 
 test 'should tell all of the sectors to evolve', ->
+  @world.evolve()
+  ok @mockSector.verify()
+
+test 'should trigger a change on all of the sectors', ->
   @world.evolve()
   ok @mockSector.verify()
 

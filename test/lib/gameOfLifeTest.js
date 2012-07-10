@@ -176,6 +176,7 @@ module('The World - Evolving', {
     });
     this.mockSector.expects("determineFate").once();
     this.mockSector.expects("evolve").once();
+    this.mockSector.expects("trigger").once();
     this.world.models = [this.mockSector.object];
     return null;
   },
@@ -188,6 +189,11 @@ test('should tell all of the sectors determine their fate', function() {
 });
 
 test('should tell all of the sectors to evolve', function() {
+  this.world.evolve();
+  return ok(this.mockSector.verify());
+});
+
+test('should trigger a change on all of the sectors', function() {
   this.world.evolve();
   return ok(this.mockSector.verify());
 });
