@@ -1,1 +1,1 @@
-## Conway's Game of Life
+![Game of Life](https://dl.dropbox.com/u/14820/backbone-game-of-life.png)
